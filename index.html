@@ -3,12 +3,171 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name</title>
+    <meta
+      name="description"
+      content="Full Stack Developer specializing in ERP systems and AI integration. Explore my projects and skills."
+    />
+    <title>Nick Vandermaarel</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <div class="header-content">
+        <div class="header-info">
+          <h1>Nick Vandermaarel</h1>
+          <p class="job-title">Full Stack Developer</p>
+        </div>
+        <nav class="nav-links">
+          <a href="ai.html">AI Use</a>
+        </nav>
+      </div>
+      <div class="social-links">
+        <a href="https://twitter.com/@ICNYeager" target="_blank"
+          ><img src="x-logo-white.png" alt="X (Twitter)" width="24" height="24"
+        /></a>
+        <a href="https://github.com/nick-vandermaarel" target="_blank"
+          ><img
+            src="GitHub_Invertocat_White.svg"
+            alt="GitHub"
+            width="24"
+            height="24"
+        /></a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="close-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </button>
+      <div class="mobile-menu">
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Technologies</a>
+          <a href="#projects">Projects</a>
+          <a href="#hobbies">Hobbies</a>
+          <a href="#contact">Contact</a>
+          <div class="divider"></div>
+          <a href="ai.html">AI Use</a>
+        </nav>
+        <div class="social-links">
+          <a href="https://twitter.com/@ICNYeager" target="_blank"
+            ><img
+              src="x-logo-white.png"
+              alt="X (Twitter)"
+              width="24"
+              height="24"
+          /></a>
+          <a href="https://github.com/nick-vandermaarel" target="_blank"
+            ><img
+              src="GitHub_Invertocat_White.svg"
+              alt="GitHub"
+              width="24"
+              height="24"
+          /></a>
+        </div>
+      </div>
+    </header>
     <main>
-      <h1>NVDM Website</h1>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          As a full-stack developer with professional experience since 2019, I
+          build comprehensive internal ERP applications. My role involves
+          mentoring junior developers and interns, while also taking
+          responsibility for gathering user feedback and crafting cohesive
+          designs that serve multiple sub-teams effectively.
+        </p>
+        <p>
+          Currently, I'm exploring innovative uses of AI and LLM technology to
+          enhance everyday business processes, including using AI to accelerate
+          the development workflow without sacrificing quality.
+        </p>
+      </section>
+      <section id="skills">
+        <h2>Technologies</h2>
+        <div class="skills-container">
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">AI</span>
+          <span class="skill-tag">Vue</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Neovim</span>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <p class="projects-note">
+          Note: Not all professional projects may be disclosed due to
+          confidentiality.
+        </p>
+        <div class="project-card">
+          <h3>Internal AI Chat App</h3>
+          <p>
+            Designed a modular chat application to integrate into our main ERP
+            system. The AI connects to plugins and hosted MCP servers to access
+            our existing business logic and bring insights for multiple
+            locations into one cohesive interface. It's built modularly so other
+            technical teams can build their own MCPs and connect them into the
+            main app.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Internal ERP System</h3>
+          <p>
+            Building a comprehensive internal ERP application to streamline
+            business operations across multiple teams, featuring modules for:
+          </p>
+          <ul class="modules-list">
+            <li>Time entry</li>
+            <li>CRM</li>
+            <li>Service requests</li>
+            <li>Internal Project Wikipedia</li>
+            <li>Resource planning</li>
+            <li>And more!</li>
+          </ul>
+        </div>
+      </section>
+      <section id="hobbies">
+        <h2>Hobbies</h2>
+        <div class="hobbies-container">
+          <span class="hobby-tag">Game Development (Godot, Monogame)</span>
+          <span class="hobby-tag">Strategy Video Games</span>
+          <span class="hobby-tag">Hiking</span>
+          <span class="hobby-tag">Linux Ricing</span>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:nicholasvdm105@gmail.com" class="email-link"
+            >nicholasvdm105@gmail.com</a
+          >
+        </p>
+      </section>
     </main>
+    <footer>
+      <nav class="footer-nav">
+        <a href="ai.html">AI Use</a>
+      </nav>
+      <p>&copy; <span id="current-year"></span> Nick Vandermaarel</p>
+    </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
