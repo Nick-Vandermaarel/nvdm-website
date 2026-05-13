@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const year = new Date().getFullYear();
-  document.getElementById("current-year").textContent = year;
+  const yearElement = document.getElementById("current-year");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 
   const hamburger = document.querySelector(".hamburger");
   const mobileMenu = document.querySelector(".mobile-menu");
@@ -18,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       link.addEventListener("click", function (e) {
         const href = link.getAttribute("href");
 
-        if (href && href.startsWith("#") && !href.startsWith("#ai")) {
+        if (href && href.startsWith("#")) {
           e.preventDefault();
           const targetId = href.substring(1);
           const targetElement = document.getElementById(targetId);
@@ -28,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const offsetTop = targetElement.offsetTop - headerHeight - 20;
             window.scrollTo({
               top: offsetTop,
-              behavior: "smooth"
+              behavior: "smooth",
             });
           }
         }
@@ -48,4 +51,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
