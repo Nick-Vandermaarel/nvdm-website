@@ -1,8 +1,16 @@
 :root {
-  --bg: #141210;
-  --bg-alt: #1c1a17;
-  --text: #f5f5f4;
-  --text-muted: #a8a29e;
-  --accent: #fed7aa;
-  --accent-hover: #fdba74;
+  /* Kanagawa Dragon base background colors from rebelot/kanagawa.nvim. */
+  --bg: #181616;
+  --bg-alt: #282727;
+
+  /* Primary text colors from the Dragon variant. */
+  --text: #c5c9c5;
+  --text-muted: #a6a69c;
+
+  /* Kanagawa Dragon orange for links and interactive accents. */
+  --accent: #b6927b;
+  --accent-hover: #c4746e;
+
+  /* Keep a warm Kanagawa Dragon highlight for emphasis and small details. */
+  --accent-warm: #c4b28a;
 }

@@ -45,7 +45,7 @@ header h1 {
 
 .job-title {
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--accent-warm);
   margin: 0.25rem 0 0 0;
 }
 
@@ -188,7 +188,9 @@ section p {
 }
 
 .project-card {
-  background: var(--bg-alt);
+  background: linear-gradient(180deg, var(--bg-alt), #1d1c19);
+  border: 1px solid #393836;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   padding: 1.5rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
@@ -197,6 +199,7 @@ section p {
 .project-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: var(--accent-warm);
 }
 
 h1,
@@ -224,23 +227,30 @@ h3 {
   display: block;
 }
 
-.skill-tag {
+.pill {
   display: inline-block;
-  background: var(--bg-alt);
+  background: #1d1c19;
+  border: 1px solid #393836;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.9rem;
   color: var(--text);
   margin: 0.25rem 0.5rem 0.25rem 0;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
+.pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(182, 146, 123, 0.2), 0 10px 24px rgba(182, 146, 123, 0.18);
+}
+
+.skill-tag,
 .hobby-tag {
-  display: inline-block;
-  background: var(--bg-alt);
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  color: var(--text);
   margin: 0.25rem 0.5rem 0.25rem 0;
 }
 
@@ -257,7 +267,7 @@ a:hover {
 }
 
 b {
-  color: var(--accent);
+  color: var(--accent-warm);
   font-weight: 800;
 }
 
