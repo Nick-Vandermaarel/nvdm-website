@@ -33,9 +33,7 @@ header {
 .header-content {
   display: flex;
   align-items: center;
-  gap: 3rem;
   flex: 1;
-  padding-right: 1rem;
 }
 
 header h1 {
@@ -43,125 +41,25 @@ header h1 {
   margin: 0;
 }
 
+.header-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
 .job-title {
   font-size: 0.9rem;
   color: var(--accent-warm);
-  margin: 0.25rem 0 0 0;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-  padding: 0.25rem 0.5rem;
-}
-
-.nav-links a:hover {
-  color: var(--accent-hover);
-  background: var(--bg-alt);
-  border-radius: 0.25rem;
-}
-
-.nav-links a[aria-current="page"] {
-  color: var(--accent-hover);
-  background: var(--bg-alt);
-  border-radius: 0.25rem;
-}
-
-.header-content .nav-links {
-  display: flex;
-  gap: 1.5rem;
-  padding-left: 1.5rem;
-  border-left: 1px solid var(--bg-alt);
 }
 
 .social-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .social-links a {
   font-size: 1.5rem;
   text-decoration: none;
-}
-
-.hamburger {
-  display: none;
-  width: 32px;
-  height: 32px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  position: relative;
-  z-index: 1001;
-}
-
-.hamburger-icon,
-.close-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 5px 0;
-}
-
-.hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background: var(--text);
-  transition: background 0.2s ease;
-}
-
-.hamburger:hover .hamburger-icon span {
-  background: var(--accent);
-}
-
-.close-icon {
-  opacity: 0;
-  transform: rotate(-90deg);
-}
-
-.close-icon svg {
-  width: 100%;
-  height: 100%;
-  stroke: var(--text);
-  stroke-width: 2;
-  transition: stroke 0.2s ease;
-}
-
-.hamburger:hover .close-icon svg {
-  stroke: var(--accent);
-}
-
-.hamburger[aria-expanded="true"] .hamburger-icon {
-  opacity: 0;
-  transform: rotate(90deg);
-}
-
-.hamburger[aria-expanded="true"] .close-icon {
-  opacity: 1;
-  transform: rotate(0deg);
-}
-
-.mobile-menu {
-  display: none;
 }
 
 main {
@@ -194,12 +92,11 @@ section p {
 }
 
 .project-card {
-  background: linear-gradient(180deg, var(--bg-alt), #1d1c19);
+  background: var(--bg-alt);
   border: 1px solid #393836;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  border-radius: 0;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  border-radius: 0.5rem;
 }
 
 .project-card h3 {
@@ -319,99 +216,12 @@ footer {
     padding: 1rem;
   }
 
-  .header-content {
-    display: block;
-    gap: 0;
-  }
-
   .header-info {
-    flex: 1;
+    display: block;
   }
 
   .job-title {
     font-size: 0.8rem;
-  }
-
-  .header-content .nav-links {
-    display: none;
-  }
-
-  .social-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-    z-index: 1001;
-  }
-
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    background: var(--bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    padding: 2rem;
-  }
-
-  .mobile-menu.active {
-    transform: translateX(0);
-  }
-
-  .mobile-menu .nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-height: 70vh;
-    overflow-y: auto;
-    padding: 1rem;
-    width: 100%;
-    align-items: center;
-  }
-
-  .mobile-menu .divider {
-    width: 100%;
-    height: 1px;
-    background: var(--bg-alt);
-    margin: 0.5rem 0;
-  }
-
-  .mobile-menu .nav-links a {
-    font-size: 1.25rem;
-    color: var(--text);
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border: 2px solid var(--bg-alt);
-    border-radius: 0.5rem;
-    transition: all 0.2s ease;
-    text-align: center;
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .mobile-menu .nav-links a:hover {
-    background: var(--bg-alt);
-    color: var(--accent);
-    border-color: var(--accent);
-    transform: translateX(5px);
-  }
-
-  .mobile-menu .social-links {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 0;
-  }
-
-  .mobile-menu .social-links a {
-    font-size: 2rem;
+    margin-top: 0.25rem;
   }
 }
