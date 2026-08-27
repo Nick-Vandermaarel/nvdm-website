@@ -1,0 +1,149 @@
+---
+import { Image } from "astro:assets";
+import PillList from "../components/PillList.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import xLogo from "../assets/x-logo-white.png";
+
+const technologies = [
+  "C#",
+  "TypeScript",
+  "AI",
+  "Vue",
+  "SQL",
+  "Azure",
+  "Docker",
+  "Neovim",
+  "Odin",
+];
+
+const hobbies = [
+  "Game Development",
+  "Strategy Video Games",
+  "Working Out",
+  "Hiking",
+  "Linux Ricing",
+];
+
+const currentYear = new Date().getFullYear();
+const sectionClasses = "mb-12 animate-fade-in";
+const headingClasses = "mb-4 text-2xl font-extrabold text-copy";
+const paragraphClasses = "pb-2 leading-7 text-copy-muted";
+---
+
+<BaseLayout
+  title="Nick Vandermaarel"
+  description="Full Stack Developer specializing in ERP systems and AI integration. Explore my projects and skills."
+>
+  <header class="flex items-center justify-between bg-surface px-6 py-3 text-sm max-md:px-4">
+    <div class="flex flex-1 items-center">
+      <div class="flex items-baseline gap-3 max-md:block">
+        <h1 class="text-xl font-extrabold text-copy">Nick Vandermaarel</h1>
+        <p class="text-sm text-accent-warm max-md:mt-1 max-md:text-xs">
+          Full Stack Developer - Process Improvement and Automation
+        </p>
+      </div>
+    </div>
+    <nav class="flex gap-4" aria-label="Social links">
+      <a
+        class="text-2xl text-accent hover:text-accent-hover"
+        href="https://twitter.com/@ICNYeager"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={xLogo}
+          alt="X (Twitter)"
+          width={24}
+          height={24}
+          loading="eager"
+        />
+      </a>
+      <a
+        class="text-2xl text-accent hover:text-accent-hover"
+        href="https://github.com/nick-vandermaarel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/GitHub_Invertocat_White.svg"
+          alt="GitHub"
+          width="24"
+          height="24"
+        />
+      </a>
+    </nav>
+  </header>
+
+  <main class="mx-auto w-full max-w-[700px] flex-1 px-6 py-8">
+    <section id="about" class={sectionClasses}>
+      <h2 class={headingClasses}>About</h2>
+      <p class={paragraphClasses}>
+        I'm a full-stack developer building internal business applications and ERP
+        systems. My role includes gathering user requirements, shaping solutions
+        around real operational needs, reviewing code, and mentoring junior
+        developers and interns to maintain a high standard of quality.
+      </p>
+      <p class={paragraphClasses}>
+        Currently, I'm exploring innovative uses of AI and Agentic Engineering to
+        enhance my workflow and other business practices.
+      </p>
+    </section>
+
+    <section id="skills" class={sectionClasses}>
+      <h2 class={headingClasses}>Technologies</h2>
+      <PillList items={technologies} />
+    </section>
+
+    <section id="projects" class={sectionClasses}>
+      <h2 class={headingClasses}>Projects</h2>
+      <ProjectCard title="Internal AI Chat App">
+        <p>
+          Designed a modular chat application to integrate into our main ERP
+          system. The AI connects to plugins and hosted MCP servers to access our
+          existing business logic and bring insights for multiple locations into
+          one cohesive interface. It's built modularly so other technical teams can
+          build their own MCPs and connect them into the main app.
+        </p>
+      </ProjectCard>
+      <ProjectCard title="Internal ERP System">
+        <p>
+          Building a comprehensive internal ERP application to streamline business
+          operations across multiple teams and countries. We connect to external
+          services such as MS Graph or Dynamics and enrich our custom internal
+          processes. Domain modules include:
+        </p>
+        <ul class="list-disc space-y-1 pl-4">
+          <li>Time entry</li>
+          <li>CRM</li>
+          <li>Service requests</li>
+          <li>Internal Project Wikipedia</li>
+          <li>Resource planning</li>
+          <li>User Management</li>
+          <li>And more!</li>
+        </ul>
+      </ProjectCard>
+    </section>
+
+    <section id="hobbies" class={sectionClasses}>
+      <h2 class={headingClasses}>Hobbies</h2>
+      <PillList items={hobbies} />
+    </section>
+
+    <section id="contact" class={sectionClasses}>
+      <h2 class={headingClasses}>Contact</h2>
+      <p class={paragraphClasses}>
+        <a
+          class="text-accent hover:text-accent-hover"
+          href="mailto:nicholasvdm105@gmail.com"
+        >
+          nicholasvdm105@gmail.com
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-surface p-4 text-center text-sm text-copy-muted">
+    <p>{currentYear} Nick Vandermaarel 🇨🇦</p>
+  </footer>
+</BaseLayout>
